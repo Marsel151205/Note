@@ -49,4 +49,23 @@ dependencies {
     // Hilt
     implementation(Dependencies.Hilt.hilt)
     kapt(Dependencies.Hilt.compiler)
+
+    // Domain
+    implementation(project(":domain"))
+
+    // Data
+    implementation(project(":data"))
+
+    // Presentation
+    implementation(project(":presentation"))
+
+    // Room
+    implementation(Dependencies.Room.roomRuntime)
+    kapt(Dependencies.Room.roomCompiler)
+}
+
+kapt {
+    javacOptions {
+        option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
+    }
 }

@@ -60,4 +60,9 @@ dependencies {
 
     // Domain
     implementation(project(":domain"))
+
+    // Lifecycle
+    implementation(Dependencies.Lifecycle.liveData)
+    implementation(Dependencies.Lifecycle.viewModel)
+    implementation(Dependencies.Lifecycle.viewModelCompose)
 }

@@ -1,6 +1,12 @@
 plugins {
     id(Plugins.androidLibrary)
     id(Plugins.kotlinAndroid)
+
+    // Kapt
+    kotlin(Plugins.kapt)
+
+    // Hilt
+    id(Plugins.hilt)
 }
 
 android {
@@ -67,4 +73,8 @@ dependencies {
 
     // Domain
     implementation(project(":domain"))
+
+    // Hilt
+    implementation(Dependencies.Hilt.hilt)
+    kapt(Dependencies.Hilt.compiler)
 }
